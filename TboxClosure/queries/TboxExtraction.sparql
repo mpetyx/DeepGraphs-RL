@@ -1,0 +1,11 @@
+SELECT DISTINCT ?x ?z
+
+WHERE {
+
+           ?x rdfs:subClassOf ?y.
+
+           ?y owl:onProperty ?z.
+
+           ?z ?a owl:DatatypeProperty.  # this ?a means nothing
+
+} ORDER BY ?x

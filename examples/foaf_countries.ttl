@@ -1,0 +1,1558 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://xmlns.com/foaf/0.1/> .
+
+<http://xmlns.com/foaf/0.1/> rdf:type :Ontology ;
+                             
+                             dc:title "Friend of a Friend (FOAF) vocabulary" ;
+                             
+                             dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> rdf:type :AnnotationProperty .
+
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> rdf:type :AnnotationProperty .
+
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> rdf:type :AnnotationProperty .
+
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl> rdf:type :AnnotationProperty .
+
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg> rdf:type :AnnotationProperty .
+
+
+
+###  http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg
+
+<http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg> rdf:type :AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/date
+
+dc:date rdf:type :AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/description
+
+dc:description rdf:type :AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/title
+
+dc:title rdf:type :AnnotationProperty .
+
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+
+vs:term_status rdf:type :AnnotationProperty .
+
+
+
+###  http://xmlns.com/foaf/0.1/membershipClass
+
+foaf:membershipClass rdf:type :AnnotationProperty ;
+                     
+                     rdfs:label "membershipClass" ;
+                     
+                     rdfs:comment "Indicates the class of individuals that are a member of a Group" ;
+                     
+                     vs:term_status "unstable" ;
+                     
+                     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+
+
+
+#
+###  http://xmlns.com/foaf/0.1/yahooChatID
+
+foaf:yahooChatID rdf:type :DatatypeProperty ;
+                 
+                 rdfs:label "Yahoo chat ID" ;
+                 
+                 <http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg> "yahooChatIDed" ;
+                 
+                 <http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg> "yahooChatIDs" ;
+                 
+                 rdfs:comment "A Yahoo chat ID" ;
+                 
+                 vs:term_status "testing" ;
+                 
+                 <http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl> "yahooChatID" ;
+                 
+                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.org/dc/terms/Agent
+
+<http://purl.org/dc/terms/Agent> rdf:type :Class ;
+                                 
+                                 :equivalentClass foaf:Agent ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Agents" ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Agent" .
+
+
+
+###  http://schema.org/CreativeWork
+
+<http://schema.org/CreativeWork> rdf:type :Class ;
+                                 
+                                 :equivalentClass foaf:Document ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "CreativeWorks" ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "CreativeWork" .
+
+
+
+###  http://schema.org/ImageObject
+
+<http://schema.org/ImageObject> rdf:type :Class ;
+                                
+                                :equivalentClass foaf:Image ;
+                                
+                                <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "ImageObject" ;
+                                
+                                <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "ImageObjects" .
+
+
+
+###  http://schema.org/Person
+
+<http://schema.org/Person> rdf:type :Class ;
+                           
+                           :equivalentClass foaf:Person ;
+                           
+                           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Persons" ;
+                           
+                           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Person" .
+
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+
+rdfs:Class rdf:type :Class ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Classes" ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Class" .
+
+
+
+###  http://www.w3.org/2000/10/swap/pim/contact#Person
+
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type :Class ;
+                                                    
+                                                    :equivalentClass foaf:Person ;
+                                                    
+                                                    <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Persons" ;
+                                                    
+                                                    <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Person" .
+
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+
+:Thing rdfs:label "Thing" ;
+       
+       :disjointWith [ rdf:type :Restriction ;
+                       :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#surround>
+                                   ] ;
+                       :minCardinality "2"^^xsd:nonNegativeInteger
+                     ] ,
+                     [ rdf:type :Restriction ;
+                       :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                       :hasSelf "true"^^xsd:boolean
+                     ] .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type :Class ;
+                                                       
+                                                       rdfs:label "Spatial Thing" ;
+                                                       
+                                                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "SpatialThings" ;
+                                                       
+                                                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "SpatialThing" .
+
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:label "Concept" ;
+                                              
+                                              <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Concepts" ;
+                                              
+                                              <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Concept" .
+
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+
+foaf:Agent rdf:type :Class ;
+           
+           rdfs:label "Agent" ;
+           
+           rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Agents" ;
+           
+           vs:term_status "stable" ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Agent" .
+
+
+
+###  http://xmlns.com/foaf/0.1/Document
+
+foaf:Document rdf:type :Class ;
+              
+              rdfs:label "Document" ;
+              
+              :disjointWith foaf:Organization ,
+                            foaf:Project ;
+              
+              <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Document" ;
+              
+              <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Documents" ;
+              
+              rdfs:comment "A document." ;
+              
+              vs:term_status "stable" ;
+              
+              rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/Group
+
+foaf:Group rdf:type :Class ;
+           
+           rdfs:label "Group" ;
+           
+           rdfs:subClassOf foaf:Agent ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Group" ;
+           
+           rdfs:comment "A class of Agents." ;
+           
+           vs:term_status "stable" ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Groups" .
+
+
+
+###  http://xmlns.com/foaf/0.1/Image
+
+foaf:Image rdf:type :Class ;
+           
+           rdfs:label "Image" ;
+           
+           rdfs:subClassOf foaf:Document ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Images" ;
+           
+           <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Image" ;
+           
+           vs:term_status "stable" ;
+           
+           rdfs:comment "An image." ;
+           
+           rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/LabelProperty
+
+foaf:LabelProperty rdf:type :Class ;
+                   
+                   rdfs:label "Label Property" ;
+                   
+                   <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "LabelProperty" ;
+                   
+                   <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "LabelProperties" ;
+                   
+                   rdfs:comment "A foaf:LabelProperty is any RDF property with texual values that serve as labels." ;
+                   
+                   vs:term_status "unstable" ;
+                   
+                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/OnlineAccount
+
+foaf:OnlineAccount rdf:type :Class ;
+                   
+                   rdfs:label "Online Account" ;
+                   
+                   rdfs:subClassOf :Thing ;
+                   
+                   rdfs:comment "An online account." ;
+                   
+                   <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "OnlineAccounts" ;
+                   
+                   vs:term_status "testing" ;
+                   
+                   <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "OnlineAccount" ;
+                   
+                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/OnlineChatAccount
+
+foaf:OnlineChatAccount rdf:type :Class ;
+                       
+                       rdfs:label "Online Chat Account" ;
+                       
+                       rdfs:subClassOf foaf:OnlineAccount ;
+                       
+                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "OnlineChatAccount" ;
+                       
+                       rdfs:comment "An online chat account." ;
+                       
+                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "OnlineChatAccounts" ;
+                       
+                       vs:term_status "unstable" ;
+                       
+                       rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/OnlineEcommerceAccount
+
+foaf:OnlineEcommerceAccount rdf:type :Class ;
+                            
+                            rdfs:label "Online E-commerce Account" ;
+                            
+                            rdfs:subClassOf foaf:OnlineAccount ;
+                            
+                            rdfs:comment "An online e-commerce account." ;
+                            
+                            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "OnlineEcommerceAccounts" ;
+                            
+                            vs:term_status "unstable" ;
+                            
+                            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "OnlineEcommerceAccount" ;
+                            
+                            rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/OnlineGamingAccount
+
+foaf:OnlineGamingAccount rdf:type :Class ;
+                         
+                         rdfs:label "Online Gaming Account" ;
+                         
+                         rdfs:subClassOf foaf:OnlineAccount ;
+                         
+                         <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "OnlineGamingAccount" ;
+                         
+                         rdfs:comment "An online gaming account." ;
+                         
+                         <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "OnlineGamingAccounts" ;
+                         
+                         vs:term_status "unstable" ;
+                         
+                         rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+
+foaf:Organization rdf:type :Class ;
+                  
+                  rdfs:label "Organization" ;
+                  
+                  rdfs:subClassOf foaf:Agent ;
+                  
+                  :disjointWith foaf:Person ;
+                  
+                  vs:term_status "stable" ;
+                  
+                  rdfs:comment "An organization." ;
+                  
+                  <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Organizations" ;
+                  
+                  <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Organization" ;
+                  
+                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/Person
+
+foaf:Person rdf:type :Class ;
+            
+            rdfs:label "Person" ;
+            
+            rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                            foaf:Agent ;
+            
+            :disjointWith foaf:Project ;
+            
+            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Persons" ;
+            
+            rdfs:comment "A person." ;
+            
+            vs:term_status "stable" ;
+            
+            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Person" ;
+            
+            rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/PersonalProfileDocument
+
+foaf:PersonalProfileDocument rdf:type :Class ;
+                             
+                             rdfs:label "PersonalProfileDocument" ;
+                             
+                             rdfs:subClassOf foaf:Document ;
+                             
+                             vs:term_status "testing" ;
+                             
+                             rdfs:comment "A personal profile RDF document." ;
+                             
+                             <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "PersonalProfileDocuments" ;
+                             
+                             <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "PersonalProfileDocument" .
+
+
+
+###  http://xmlns.com/foaf/0.1/Project
+
+foaf:Project rdf:type :Class ;
+             
+             rdfs:label "Project" ;
+             
+             vs:term_status "testing" ;
+             
+             <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "Project" ;
+             
+             <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "Projects" ;
+             
+             rdfs:comment "A project (a collective endeavour of some kind)." ;
+             
+             rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#baltic-state
+
+<http://xmlns.com/foaf/0.1/#baltic-state> rdf:type :Class ;
+                                          
+                                          rdfs:subClassOf :Thing ,
+                                                          [ rdf:type :Class ;
+                                                            :unionOf ( [ rdf:type :Class ;
+                                                                         :unionOf ( [ rdf:type :Class ;
+                                                                                      :oneOf ( <http://xmlns.com/foaf/0.1/#Latvia>
+                                                                                             )
+                                                                                    ]
+                                                                                    [ rdf:type :Class ;
+                                                                                      :oneOf ( <http://xmlns.com/foaf/0.1/#Lithuania>
+                                                                                             )
+                                                                                    ]
+                                                                                  )
+                                                                       ]
+                                                                       [ rdf:type :Class ;
+                                                                         :oneOf ( <http://xmlns.com/foaf/0.1/#Estonia>
+                                                                                )
+                                                                       ]
+                                                                     )
+                                                          ] ;
+                                          
+                                          <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "baltic-state" ;
+                                          
+                                          <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "baltic-states" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#country
+
+<http://xmlns.com/foaf/0.1/#country> rdf:type :Class ;
+                                     
+                                     rdfs:subClassOf :Thing ,
+                                                     <http://xmlns.com/foaf/0.1/#territory> ;
+                                     
+                                     :disjointWith [ rdf:type :Restriction ;
+                                                     :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                                 ] ;
+                                                     :someValuesFrom [ rdf:type :Class ;
+                                                                       :oneOf ( <http://xmlns.com/foaf/0.1/#Iceland>
+                                                                              )
+                                                                     ]
+                                                   ] ,
+                                                   [ rdf:type :Restriction ;
+                                                     :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                                 ] ;
+                                                     :someValuesFrom [ rdf:type :Class ;
+                                                                       :oneOf ( <http://xmlns.com/foaf/0.1/#Cyprus>
+                                                                              )
+                                                                     ]
+                                                   ] ,
+                                                   [ rdf:type :Restriction ;
+                                                     :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                                 ] ;
+                                                     :someValuesFrom [ rdf:type :Class ;
+                                                                       :oneOf ( <http://xmlns.com/foaf/0.1/#Malta>
+                                                                              )
+                                                                     ]
+                                                   ] ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "countries" ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "country" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#doubly-landlocked-territory
+
+<http://xmlns.com/foaf/0.1/#doubly-landlocked-territory> rdf:type :Class ;
+                                                         
+                                                         rdfs:subClassOf [ rdf:type :Class ;
+                                                                           :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                                                                                             [ rdf:type :Class ;
+                                                                                               :complementOf [ rdf:type :Restriction ;
+                                                                                                               :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                                                               :someValuesFrom [ rdf:type :Class ;
+                                                                                                                                 :complementOf <http://xmlns.com/foaf/0.1/#landlocked-territories>
+                                                                                                                               ]
+                                                                                                             ]
+                                                                                             ]
+                                                                                           )
+                                                                         ] ;
+                                                         
+                                                         <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "doubly-landlocked-territories" ;
+                                                         
+                                                         <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "doubly-landlocked-territory" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#enclave
+
+<http://xmlns.com/foaf/0.1/#enclave> rdf:type :Class ;
+                                     
+                                     rdfs:subClassOf :Thing ,
+                                                     [ rdf:type :Class ;
+                                                       :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                                                                         [ rdf:type :Restriction ;
+                                                                           :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#surround>
+                                                                                       ] ;
+                                                                           :someValuesFrom <http://xmlns.com/foaf/0.1/#country>
+                                                                         ]
+                                                                       )
+                                                     ] ;
+                                     
+                                     :disjointWith [ rdf:type :Class ;
+                                                     :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                                                                       [ rdf:type :Restriction ;
+                                                                         :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                                                     ] ;
+                                                                         :onClass <http://xmlns.com/foaf/0.1/#country> ;
+                                                                         :minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                       ]
+                                                                     )
+                                                   ] ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "enclaves" ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "enclave" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#island-country
+
+<http://xmlns.com/foaf/0.1/#island-country> rdf:type :Class ;
+                                            
+                                            rdfs:subClassOf :Thing ,
+                                                            <http://xmlns.com/foaf/0.1/#country> ;
+                                            
+                                            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "island-countries" ;
+                                            
+                                            <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "island-country" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#landlocked-territories
+
+<http://xmlns.com/foaf/0.1/#landlocked-territories> <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "landlocked-territorieses" ;
+                                                    
+                                                    <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "landlocked-territories" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#landlocked-territory
+
+<http://xmlns.com/foaf/0.1/#landlocked-territory> rdf:type :Class ;
+                                                  
+                                                  rdfs:subClassOf :Thing ,
+                                                                  [ rdf:type :Class ;
+                                                                    :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                                                                                      [ rdf:type :Class ;
+                                                                                        :complementOf [ rdf:type :Restriction ;
+                                                                                                        :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                                                                                    ] ;
+                                                                                                        :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                                                                                      ]
+                                                                                      ]
+                                                                                    )
+                                                                  ] ;
+                                                  
+                                                  <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "landlocked-territory" ;
+                                                  
+                                                  <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "landlocked-territories" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#neutral-country
+
+<http://xmlns.com/foaf/0.1/#neutral-country> <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "neutral-countries" ;
+                                             
+                                             <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "neutral-country" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#sea
+
+<http://xmlns.com/foaf/0.1/#sea> rdf:type :Class ;
+                                 
+                                 :disjointWith <http://xmlns.com/foaf/0.1/#territory> ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "seas" ;
+                                 
+                                 <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "sea" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#territory
+
+<http://xmlns.com/foaf/0.1/#territory> rdf:type :Class ;
+                                       
+                                       rdfs:subClassOf [ rdf:type :Class ;
+                                                         :unionOf ( [ rdf:type :Restriction ;
+                                                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                      :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                                                    ]
+                                                                    [ rdf:type :Restriction ;
+                                                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                      :someValuesFrom <http://xmlns.com/foaf/0.1/#territory>
+                                                                    ]
+                                                                  )
+                                                       ] ;
+                                       
+                                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg> "territory" ;
+                                       
+                                       <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl> "territories" .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://xmlns.com/foaf/0.1/#Albania
+
+<http://xmlns.com/foaf/0.1/#Albania> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Albania" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Andorra
+
+<http://xmlns.com/foaf/0.1/#Andorra> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Andorra" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Armenia
+
+<http://xmlns.com/foaf/0.1/#Armenia> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Armenia" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Austria
+
+<http://xmlns.com/foaf/0.1/#Austria> rdf:type :NamedIndividual ,
+                                              [ rdf:type :Class ;
+                                                :complementOf [ rdf:type :Restriction ;
+                                                                :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                                              ]
+                                              ] ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Austria" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Hungary> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Liechtenstein> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Slovakia> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Slovenia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Belarus
+
+<http://xmlns.com/foaf/0.1/#Belarus> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Belarus" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Belgium
+
+<http://xmlns.com/foaf/0.1/#Belgium> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Belgium" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Germany> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Luxembourg> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Netherlands> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Bosnia_and_Herzegovina
+
+<http://xmlns.com/foaf/0.1/#Bosnia_and_Herzegovina> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Bosnia_and_Herzegovina" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Bulgaria
+
+<http://xmlns.com/foaf/0.1/#Bulgaria> rdf:type :NamedIndividual ;
+                                      
+                                      <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Bulgaria" ;
+                                      
+                                      <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Republic_of_Macedonia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Croatia
+
+<http://xmlns.com/foaf/0.1/#Croatia> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Croatia" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Bosnia_and_Herzegovina> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Cyprus
+
+<http://xmlns.com/foaf/0.1/#Cyprus> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Cyprus" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Czech_Republic
+
+<http://xmlns.com/foaf/0.1/#Czech_Republic> rdf:type :NamedIndividual ;
+                                            
+                                            <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Czech_Republic" ;
+                                            
+                                            <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Austria> ,
+                                                                                <http://xmlns.com/foaf/0.1/#Slovakia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Denmark
+
+<http://xmlns.com/foaf/0.1/#Denmark> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Denmark" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#EU-countries
+
+<http://xmlns.com/foaf/0.1/#EU-countries> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "EU-countries" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Estland
+
+<http://xmlns.com/foaf/0.1/#Estland> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Estland" ;
+                                     
+                                     :sameAs <http://xmlns.com/foaf/0.1/#Estonia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Estonia
+
+<http://xmlns.com/foaf/0.1/#Estonia> rdf:type :NamedIndividual ,
+                                              <http://xmlns.com/foaf/0.1/#baltic-state> ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Estonia" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Russia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Finland
+
+<http://xmlns.com/foaf/0.1/#Finland> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Finland" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#like> <http://xmlns.com/foaf/0.1/#NATO> ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Russia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#France
+
+<http://xmlns.com/foaf/0.1/#France> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "France" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Andorra> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Belgium> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Germany> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Italy> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Luxembourg> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Monaco> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Switzerland> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Georgia
+
+<http://xmlns.com/foaf/0.1/#Georgia> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Georgia" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Germany
+
+<http://xmlns.com/foaf/0.1/#Germany> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Germany" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Austria> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Czech_Republic> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Denmark> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Luxembourg> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Netherlands> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Poland> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Switzerland> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Greece
+
+<http://xmlns.com/foaf/0.1/#Greece> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Greece" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Albania> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Bulgaria> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Republic_of_Macedonia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Turkey> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Hungary
+
+<http://xmlns.com/foaf/0.1/#Hungary> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Hungary" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Croatia> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Romania> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Serbia> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Slovenia> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Ukraine> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Iceland
+
+<http://xmlns.com/foaf/0.1/#Iceland> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Iceland" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Iran
+
+<http://xmlns.com/foaf/0.1/#Iran> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Iran" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Iraq
+
+<http://xmlns.com/foaf/0.1/#Iraq> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Iraq" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Ireland
+
+<http://xmlns.com/foaf/0.1/#Ireland> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Ireland" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Italy
+
+<http://xmlns.com/foaf/0.1/#Italy> rdf:type :NamedIndividual ;
+                                   
+                                   <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Italy" ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Austria> ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#surround> <http://xmlns.com/foaf/0.1/#San_Marino> ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#San_Marino> ,
+                                                                       <http://xmlns.com/foaf/0.1/#Slovenia> ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#surround> <http://xmlns.com/foaf/0.1/#Vatican_City> ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Vatican_City> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Kaliningrad
+
+<http://xmlns.com/foaf/0.1/#Kaliningrad> rdf:type :NamedIndividual ,
+                                                  [ rdf:type :Class ;
+                                                    :complementOf <http://xmlns.com/foaf/0.1/#country>
+                                                  ] ;
+                                         
+                                         <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Kaliningrad" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Kosovo
+
+<http://xmlns.com/foaf/0.1/#Kosovo> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Kosovo" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Latvia
+
+<http://xmlns.com/foaf/0.1/#Latvia> rdf:type :NamedIndividual ,
+                                             <http://xmlns.com/foaf/0.1/#baltic-state> ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Latvia" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Belarus> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Estonia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Russia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Liechtenstein
+
+<http://xmlns.com/foaf/0.1/#Liechtenstein> rdf:type :NamedIndividual ,
+                                                    [ rdf:type :Class ;
+                                                      :complementOf [ rdf:type :Restriction ;
+                                                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                      :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                                                    ]
+                                                    ] ,
+                                                    [ rdf:type :Restriction ;
+                                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                      :onClass <http://xmlns.com/foaf/0.1/#territory> ;
+                                                      :qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                    ] ;
+                                           
+                                           <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Liechtenstein" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Lithuania
+
+<http://xmlns.com/foaf/0.1/#Lithuania> rdf:type :NamedIndividual ,
+                                                <http://xmlns.com/foaf/0.1/#baltic-state> ;
+                                       
+                                       <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Lithuania" ;
+                                       
+                                       <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Belarus> ,
+                                                                           <http://xmlns.com/foaf/0.1/#Kaliningrad> ,
+                                                                           <http://xmlns.com/foaf/0.1/#Latvia> ,
+                                                                           <http://xmlns.com/foaf/0.1/#Russia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Luxembourg
+
+<http://xmlns.com/foaf/0.1/#Luxembourg> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Luxembourg" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Malta
+
+<http://xmlns.com/foaf/0.1/#Malta> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Malta" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Moldova
+
+<http://xmlns.com/foaf/0.1/#Moldova> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Moldova" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Monaco
+
+<http://xmlns.com/foaf/0.1/#Monaco> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Monaco" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Monte_Negro
+
+<http://xmlns.com/foaf/0.1/#Monte_Negro> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Monte_Negro" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#NATO
+
+<http://xmlns.com/foaf/0.1/#NATO> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "NATO" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Netherlands
+
+<http://xmlns.com/foaf/0.1/#Netherlands> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Netherlands" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Norway
+
+<http://xmlns.com/foaf/0.1/#Norway> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Norway" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Finland> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Russia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Poland
+
+<http://xmlns.com/foaf/0.1/#Poland> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Poland" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Belarus> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Czech_Republic> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Kaliningrad> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Lithuania> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Russia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Slovakia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Ukraine> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Portugal
+
+<http://xmlns.com/foaf/0.1/#Portugal> rdf:type :NamedIndividual ;
+                                      
+                                      <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Portugal" ;
+                                      
+                                      <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Spain> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Republic_of_Macedonia
+
+<http://xmlns.com/foaf/0.1/#Republic_of_Macedonia> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Republic_of_Macedonia" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Romania
+
+<http://xmlns.com/foaf/0.1/#Romania> rdf:type :NamedIndividual ;
+                                     
+                                     <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Romania" ;
+                                     
+                                     <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Bulgaria> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Moldova> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Serbia> ,
+                                                                         <http://xmlns.com/foaf/0.1/#Ukraine> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Russia
+
+<http://xmlns.com/foaf/0.1/#Russia> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Russia" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#San_Marino
+
+<http://xmlns.com/foaf/0.1/#San_Marino> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "San_Marino" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Serbia
+
+<http://xmlns.com/foaf/0.1/#Serbia> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Serbia" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Bosnia_and_Herzegovina> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Bulgaria> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Croatia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Kosovo> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Monte_Negro> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Republic_of_Macedonia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Slovakia
+
+<http://xmlns.com/foaf/0.1/#Slovakia> rdf:type :NamedIndividual ;
+                                      
+                                      <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Slovakia" ;
+                                      
+                                      <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Hungary> ,
+                                                                          <http://xmlns.com/foaf/0.1/#Ukraine> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Slovenia
+
+<http://xmlns.com/foaf/0.1/#Slovenia> rdf:type :NamedIndividual ;
+                                      
+                                      <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Slovenia" ;
+                                      
+                                      <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Croatia> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Spain
+
+<http://xmlns.com/foaf/0.1/#Spain> rdf:type :NamedIndividual ;
+                                   
+                                   <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Spain" ;
+                                   
+                                   <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Andorra> ,
+                                                                       <http://xmlns.com/foaf/0.1/#France> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Sweden
+
+<http://xmlns.com/foaf/0.1/#Sweden> rdf:type :NamedIndividual ,
+                                             <http://xmlns.com/foaf/0.1/#neutral-country> ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Sweden" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Finland> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Norway> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Switzerland
+
+<http://xmlns.com/foaf/0.1/#Switzerland> rdf:type :NamedIndividual ,
+                                                  <http://xmlns.com/foaf/0.1/#neutral-country> ,
+                                                  [ rdf:type :Class ;
+                                                    :complementOf [ rdf:type :Restriction ;
+                                                                    :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                                                    :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                                                  ]
+                                                  ] ;
+                                         
+                                         <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Switzerland" ;
+                                         
+                                         <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Austria> ,
+                                                                             <http://xmlns.com/foaf/0.1/#Italy> ,
+                                                                             <http://xmlns.com/foaf/0.1/#Liechtenstein> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Syria
+
+<http://xmlns.com/foaf/0.1/#Syria> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Syria" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Turkey
+
+<http://xmlns.com/foaf/0.1/#Turkey> rdf:type :NamedIndividual ;
+                                    
+                                    <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Turkey" ;
+                                    
+                                    <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Armenia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Bulgaria> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Georgia> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Iran> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Iraq> ,
+                                                                        <http://xmlns.com/foaf/0.1/#Syria> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Ukraine
+
+<http://xmlns.com/foaf/0.1/#Ukraine> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Ukraine" .
+
+
+
+###  http://xmlns.com/foaf/0.1/#United_Kingdom
+
+<http://xmlns.com/foaf/0.1/#United_Kingdom> rdf:type :NamedIndividual ,
+                                                     <http://xmlns.com/foaf/0.1/#island-country> ;
+                                            
+                                            <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "United_Kingdom" ;
+                                            
+                                            <http://xmlns.com/foaf/0.1/#border> <http://xmlns.com/foaf/0.1/#Ireland> .
+
+
+
+###  http://xmlns.com/foaf/0.1/#Vatican_City
+
+<http://xmlns.com/foaf/0.1/#Vatican_City> <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg> "Vatican_City" .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type :Class ;
+  :disjointWith [ rdf:type :Restriction ;
+                  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                              ] ;
+                  :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                ] ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#surround>
+                                  ] ;
+                      :someValuesFrom [ rdf:type :Class ;
+                                        :complementOf <http://xmlns.com/foaf/0.1/#sea>
+                                      ]
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#landlocked-territories>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                  ] ;
+                      :someValuesFrom [ rdf:type :Class ;
+                                        :oneOf ( <http://xmlns.com/foaf/0.1/#Liechtenstein>
+                                               )
+                                      ]
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Denmark>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Belgium>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#France>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/#doubly-landlocked-territory> ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                    [ rdf:type :Class ;
+                      :complementOf [ rdf:type :Restriction ;
+                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                      :someValuesFrom [ rdf:type :Class ;
+                                                        :complementOf <http://xmlns.com/foaf/0.1/#landlocked-territories>
+                                                      ]
+                                    ]
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Finland>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    <http://xmlns.com/foaf/0.1/#doubly-landlocked-territory>
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/#landlocked-territory> ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                    [ rdf:type :Class ;
+                      :complementOf [ rdf:type :Restriction ;
+                                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                  ] ;
+                                      :someValuesFrom <http://xmlns.com/foaf/0.1/#sea>
+                                    ]
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    [ rdf:type :Class ;
+                      :complementOf [ rdf:type :Restriction ;
+                                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                                      :someValuesFrom [ rdf:type :Class ;
+                                                        :complementOf [ rdf:type :Class ;
+                                                                        :oneOf ( <http://xmlns.com/foaf/0.1/#EU-countries>
+                                                                               )
+                                                                      ]
+                                                      ]
+                                    ]
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Germany>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                  ] ;
+                      :someValuesFrom [ rdf:type :Class ;
+                                        :oneOf ( <http://xmlns.com/foaf/0.1/#Liechtenstein>
+                                               )
+                                      ]
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Liechtenstein>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    <http://xmlns.com/foaf/0.1/#enclave>
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    [ rdf:type :Class ;
+                      :complementOf [ rdf:type :Class ;
+                                      :oneOf ( <http://xmlns.com/foaf/0.1/#Switzerland>
+                                             )
+                                    ]
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Bulgaria>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Czech_Republic>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Austria>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Estonia>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/#island-country> ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    [ rdf:type :Restriction ;
+                      :onProperty <http://xmlns.com/foaf/0.1/#border> ;
+                      :someValuesFrom <http://xmlns.com/foaf/0.1/#island-country>
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                  ] ;
+                      :onClass <http://xmlns.com/foaf/0.1/#country> ;
+                      :qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Switzerland>
+                           )
+                  ]
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#enclave>
+                    [ rdf:type :Class ;
+                      :complementOf <http://xmlns.com/foaf/0.1/#country>
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/#island-country> ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#country>
+                    [ rdf:type :Class ;
+                      :complementOf [ rdf:type :Restriction ;
+                                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                                  ] ;
+                                      :someValuesFrom <http://xmlns.com/foaf/0.1/#country>
+                                    ]
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf :Thing ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#enclave>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+                                  ] ;
+                      :onClass <http://xmlns.com/foaf/0.1/#country> ;
+                      :minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                    ]
+                  )
+] .
+[ rdf:type :Class ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/#enclave> ;
+  :intersectionOf ( <http://xmlns.com/foaf/0.1/#territory>
+                    [ rdf:type :Restriction ;
+                      :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#surround>
+                                  ] ;
+                      :someValuesFrom <http://xmlns.com/foaf/0.1/#country>
+                    ]
+                  )
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#Cyprus>
+                           )
+                  ]
+] .
+[ rdf:type :Restriction ;
+  rdfs:subClassOf :Thing ;
+  :onProperty [ :inverseOf <http://xmlns.com/foaf/0.1/#border>
+              ] ;
+  :someValuesFrom [ rdf:type :Class ;
+                    :oneOf ( <http://xmlns.com/foaf/0.1/#United_Kingdom>
+                           )
+                  ]
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+

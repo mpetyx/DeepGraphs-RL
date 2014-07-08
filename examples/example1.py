@@ -15,4 +15,4 @@ print len(graph)
 
 KnowledgeBaseClosure(graph=graph, axioms=True, daxioms=True).closure()
 
-graph.serialize("test.rdf", format="turtle")
+graph.serialize("test.ttl", format="turtle")

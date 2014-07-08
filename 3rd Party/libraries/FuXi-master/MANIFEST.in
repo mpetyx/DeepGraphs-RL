@@ -1,0 +1,7 @@
+include README.md
+include run_tests.py
+recursive-include FuXi *.py
+recursive-include tools *.py
+recursive-include test *.py
+include *.n3
+graft test
